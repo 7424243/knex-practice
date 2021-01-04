@@ -11,15 +11,19 @@ const knexInstance = knex({
 //         console.log(result)
 //     })
 
-const qry = knexInstance
-    .select('product_id', 'name', 'price', 'category')
-    .from('amazong_products')
-    .where({name: 'Point of view gun'})
-    .first()
-    .toQuery()
-    // .then(result => {
-    //     console.log(result)
-    // })
+// const searchTerm = 'holo'
 
-    console.log(qry)
+function searchByProduceName(searchTerm) {
+    knexInstance
+        .select('product_id', 'name', 'price', 'category')
+        .from('amazong_products')
+        .where('name', 'ILIKE', `%${searchTerm}%`)
+        .then(result => {
+            console.log(result)
+        })
+}
+
+searchByProduceName('holo')
+
+    //console.log(qry)
 
