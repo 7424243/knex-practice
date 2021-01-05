@@ -25,5 +25,23 @@ function searchByProduceName(searchTerm) {
 
 searchByProduceName('holo')
 
-    //console.log(qry)
-
+function mostPopularVidoesForDays(days) {
+    knexInstance
+        .select('video_name', 'region')
+        .count('date_viewed AS views')
+        .where(
+            'date_viewed',
+            '>',
+            knexInstance.raw(`now() - '?? days'::INTERVAL`, days)
+        )
+        .from('whopipe_video_views')
+        .groupBy('video_name', 'region')
+        .orderBy([
+            {column: 'region', order: 'ASC'},
+            {column: 'views', order: 'DESC'}
+        ])
+        .then(result => {
+            console.log(result)
+        })
+}
+mostPopularVidoesForDays(30)
