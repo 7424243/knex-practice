@@ -1,7 +1,6 @@
 const ArticlesService = require('../src/articles-service')
 const knex = require('knex')
 const { expect } = require('chai')
-const { getAllArticles } = require('../src/articles-service')
 
 describe(`Articles service object`, function() {
     let db
