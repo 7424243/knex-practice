@@ -1,3 +1,22 @@
 INSERT INTO blogful_articles (title, date_published, content)
 VALUES
-    ('Blog Post #1', now() - '21 days'::INTERVAL), 'I am the first blog post!!')
+    ('Blog Post #1', now() - '21 days'::INTERVAL, 'I am the first blog post!!'),
+    ('Blog Post #2', now() - '20 days'::INTERVAL, 'I am the second blog post!!'),
+    ('Blog Post #3', now() - '19 days'::INTERVAL, 'I am the third blog post!!'),
+    ('Blog Post #4', now() - '18 days'::INTERVAL, 'I am the fourth blog post!!'),
+    ('Blog Post #5', now() - '17 days'::INTERVAL, 'I am the fifth blog post!!'),
+    ('Blog Post #6', now() - '16 days'::INTERVAL, 'I am the sixth blog post!!'),
+    ('Blog Post #7', now() - '15 days'::INTERVAL, 'I am the seventh blog post!!'),
+    ('Blog Post #8', now() - '14 days'::INTERVAL, 'I am the eighth blog post!!'),
+    ('Blog Post #9', now() - '13 days'::INTERVAL, 'I am the nineth blog post!!'),
+    ('Blog Post #10', now() - '12 days'::INTERVAL, 'I am the tenth blog post!!'),
+    ('Blog Post #11', now() - '11 days'::INTERVAL, 'I am the eleventh blog post!!'),
+    ('Blog Post #12', now() - '10 days'::INTERVAL, 'I am the twelfth blog post!!'),
+    ('Blog Post #13', now() - '9 days'::INTERVAL, 'I am the thirteenth blog post!!'),
+    ('Blog Post #14', now() - '8 days'::INTERVAL, 'I am the fourteenth blog post!!'),
+    ('Blog Post #15', now() - '7 days'::INTERVAL, 'I am the fifteenth blog post!!'),
+    ('Blog Post #16', now() - '6 days'::INTERVAL, 'I am the sixteenth blog post!!'),
+    ('Blog Post #17', now() - '5 days'::INTERVAL, 'I am the seventeenth blog post!!'),
+    ('Blog Post #18', now() - '4 days'::INTERVAL, 'I am the eighteenth blog post!!'),
+    ('Blog Post #19', now() - '3 days'::INTERVAL, 'I am the nineteenth blog post!!'),
+    ('Blog Post #20', now() - '2 days'::INTERVAL, 'I am the twentieth blog post!!');
